@@ -103,7 +103,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                               0.0, 8.0, 0.0, 0.0),
                           child: Text(
                             'Edit Appointment',
-                            style: FlutterFlowTheme.of(context).title3,
+                            style: FlutterFlowTheme.of(context).headlineSmall,
                           ),
                         ),
                         Row(
@@ -115,7 +115,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                     0.0, 8.0, 0.0, 0.0),
                                 child: Text(
                                   'Edit the fields below in order to change your appointment.',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                  style: FlutterFlowTheme.of(context).bodySmall,
                                 ),
                               ),
                             ),
@@ -126,7 +126,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                               0.0, 12.0, 0.0, 0.0),
                           child: Text(
                             'Emails will be sent to:',
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
                         ),
                         Padding(
@@ -135,11 +135,10 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                           child: Text(
                             currentUserEmail,
                             style: FlutterFlowTheme.of(context)
-                                .subtitle1
+                                .titleMedium
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: FlutterFlowTheme.of(context).primary,
                                 ),
                           ),
                         ),
@@ -152,7 +151,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                             decoration: InputDecoration(
                               labelText: 'Booking For',
                               labelStyle:
-                                  FlutterFlowTheme.of(context).bodyText2,
+                                  FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -189,7 +188,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                   20.0, 24.0, 0.0, 24.0),
                             ),
                             style: FlutterFlowTheme.of(context)
-                                .subtitle1
+                                .titleMedium
                                 .override(
                                   fontFamily: 'Outfit',
                                   color:
@@ -219,7 +218,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                             width: MediaQuery.of(context).size.width * 0.9,
                             height: 60.0,
                             textStyle: FlutterFlowTheme.of(context)
-                                .subtitle1
+                                .titleMedium
                                 .override(
                                   fontFamily: 'Outfit',
                                   color:
@@ -252,7 +251,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                             decoration: InputDecoration(
                               labelText: 'What\'s the problem?',
                               labelStyle:
-                                  FlutterFlowTheme.of(context).bodyText2,
+                                  FlutterFlowTheme.of(context).bodySmall,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                                   color: FlutterFlowTheme.of(context)
@@ -288,7 +287,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                               contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 24.0, 0.0, 24.0),
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                             textAlign: TextAlign.start,
                             maxLines: 8,
                             keyboardType: TextInputType.multiline,
@@ -352,7 +351,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                               'Choose Date',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText1
+                                                      .bodyMedium
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         fontSize: 12.0,
@@ -373,13 +372,13 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                                           .appointmentTime!),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2
+                                                      .bodySmall
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .tertiaryColor,
+                                                                .tertiary,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -396,13 +395,13 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                                           .appointmentTime!),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2
+                                                      .bodySmall
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .tertiaryColor,
+                                                                .tertiary,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                       ),
@@ -452,7 +451,7 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   textStyle: FlutterFlowTheme.of(context)
-                                      .subtitle1
+                                      .titleMedium
                                       .override(
                                         fontFamily: 'Outfit',
                                         color: FlutterFlowTheme.of(context)
@@ -489,10 +488,9 @@ class _EditBookingWidgetState extends State<EditBookingWidget> {
                                       0.0, 0.0, 0.0, 0.0),
                                   iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
-                                      .subtitle2
+                                      .titleSmall
                                       .override(
                                         fontFamily: 'Outfit',
                                         color: Colors.white,

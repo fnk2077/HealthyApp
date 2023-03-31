@@ -54,7 +54,7 @@ class _AppointmentDetailsProfileWidgetState
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
                 size: 40.0,
               ),
             ),
@@ -79,7 +79,7 @@ class _AppointmentDetailsProfileWidgetState
             ),
             title: Text(
               'Details',
-              style: FlutterFlowTheme.of(context).title3,
+              style: FlutterFlowTheme.of(context).headlineSmall,
             ),
             actions: [],
             centerTitle: false,
@@ -97,7 +97,7 @@ class _AppointmentDetailsProfileWidgetState
                       Expanded(
                         child: Text(
                           'Type of Appointment',
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
                       ),
                     ],
@@ -112,7 +112,9 @@ class _AppointmentDetailsProfileWidgetState
                         child: Text(
                           appointmentDetailsProfileAppointmentsRecord
                               .appointmentType!,
-                          style: FlutterFlowTheme.of(context).title3.override(
+                          style: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .override(
                                 fontFamily: 'Outfit',
                                 fontWeight: FontWeight.bold,
                               ),
@@ -130,7 +132,7 @@ class _AppointmentDetailsProfileWidgetState
                       Expanded(
                         child: Text(
                           'What’s the problem?',
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
                       ),
                     ],
@@ -145,7 +147,7 @@ class _AppointmentDetailsProfileWidgetState
                         child: Text(
                           appointmentDetailsProfileAppointmentsRecord
                               .appointmentDescription!,
-                          style: FlutterFlowTheme.of(context).bodyText2,
+                          style: FlutterFlowTheme.of(context).bodySmall,
                         ),
                       ),
                     ],
@@ -160,7 +162,7 @@ class _AppointmentDetailsProfileWidgetState
                       Expanded(
                         child: Text(
                           'For',
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
                       ),
                     ],
@@ -185,8 +187,7 @@ class _AppointmentDetailsProfileWidgetState
                                 width: 40.0,
                                 height: 40.0,
                                 child: SpinKitPumpingHeart(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   size: 40.0,
                                 ),
                               ),
@@ -215,8 +216,8 @@ class _AppointmentDetailsProfileWidgetState
                                   children: [
                                     Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                       elevation: 2.0,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
@@ -256,7 +257,7 @@ class _AppointmentDetailsProfileWidgetState
                                                     .appointmentName!,
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .subtitle1
+                                                        .titleMedium
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color: FlutterFlowTheme
@@ -270,12 +271,12 @@ class _AppointmentDetailsProfileWidgetState
                                             appointmentDetailsProfileAppointmentsRecord
                                                 .appointmentEmail!,
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyText1
+                                                .bodyMedium
                                                 .override(
                                                   fontFamily: 'Outfit',
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .primaryColor,
+                                                      .primary,
                                                 ),
                                           ),
                                         ],
@@ -302,7 +303,7 @@ class _AppointmentDetailsProfileWidgetState
                               0.0, 16.0, 0.0, 0.0),
                           child: Text(
                             'When',
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
                         ),
                       ),
@@ -319,7 +320,7 @@ class _AppointmentDetailsProfileWidgetState
                             'yMMMd',
                             appointmentDetailsProfileAppointmentsRecord
                                 .appointmentTime!),
-                        style: FlutterFlowTheme.of(context).title1,
+                        style: FlutterFlowTheme.of(context).displaySmall,
                       ),
                       Padding(
                         padding:
@@ -329,7 +330,7 @@ class _AppointmentDetailsProfileWidgetState
                               'jm',
                               appointmentDetailsProfileAppointmentsRecord
                                   .appointmentTime!),
-                          style: FlutterFlowTheme.of(context).title1,
+                          style: FlutterFlowTheme.of(context).displaySmall,
                         ),
                       ),
                     ],
@@ -354,7 +355,7 @@ class _AppointmentDetailsProfileWidgetState
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
-                          FlutterFlowTheme.of(context).subtitle2.override(
+                          FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontWeight: FontWeight.normal,

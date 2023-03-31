@@ -125,7 +125,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
                 size: 40.0,
               ),
             ),
@@ -163,8 +163,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                 children: [
                                   Card(
                                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     elevation: 2.0,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(40.0),
@@ -260,7 +259,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                 Icons.login_rounded,
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryColor,
+                                                        .secondary,
                                                 size: 24.0,
                                               ),
                                               onPressed: () async {
@@ -292,7 +291,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                 children: [
                                   Text(
                                     profilePageUsersRecord.displayName!,
-                                    style: FlutterFlowTheme.of(context).title3,
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineSmall,
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
@@ -300,7 +300,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                     child: Text(
                                       profilePageUsersRecord.age!.toString(),
                                       style: FlutterFlowTheme.of(context)
-                                          .subtitle1,
+                                          .titleMedium,
                                     ),
                                   ),
                                 ],
@@ -315,11 +315,11 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                   child: Text(
                                     profilePageUsersRecord.email!,
                                     style: FlutterFlowTheme.of(context)
-                                        .bodyText1
+                                        .bodyMedium
                                         .override(
                                           fontFamily: 'Outfit',
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                              .primary,
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
@@ -336,7 +336,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                     'Ailments',
                                     textAlign: TextAlign.start,
                                     style:
-                                        FlutterFlowTheme.of(context).bodyText2,
+                                        FlutterFlowTheme.of(context).bodySmall,
                                   ),
                                 ],
                               ),
@@ -350,8 +350,8 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                   Expanded(
                                     child: AutoSizeText(
                                       profilePageUsersRecord.ailments!,
-                                      style:
-                                          FlutterFlowTheme.of(context).title3,
+                                      style: FlutterFlowTheme.of(context)
+                                          .headlineSmall,
                                     ),
                                   ),
                                 ],
@@ -372,7 +372,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                         'Next Appointment',
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText2,
+                                            .bodySmall,
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -380,7 +380,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                         child: Text(
                                           'Aug 20, 2021',
                                           style: FlutterFlowTheme.of(context)
-                                              .title1,
+                                              .displaySmall,
                                         ),
                                       ),
                                     ],
@@ -437,7 +437,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                 'Switch to Dark Mode',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText1,
+                                                        .bodyMedium,
                                               ),
                                               Container(
                                                 width: 80.0,
@@ -554,7 +554,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                 'Switch to Light Mode',
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText1
+                                                        .bodyMedium
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color: Colors.white,
@@ -663,7 +663,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                         children: [
                           Text(
                             'Past Appointments',
-                            style: FlutterFlowTheme.of(context).bodyText2,
+                            style: FlutterFlowTheme.of(context).bodySmall,
                           ),
                         ],
                       ),
@@ -688,8 +688,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                 width: 40.0,
                                 height: 40.0,
                                 child: SpinKitPumpingHeart(
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   size: 40.0,
                                 ),
                               ),
@@ -726,7 +725,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                           height: 40.0,
                                           child: SpinKitPumpingHeart(
                                             color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
+                                                .primary,
                                             size: 40.0,
                                           ),
                                         ),
@@ -804,7 +803,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .title3,
+                                                                .headlineSmall,
                                                       ),
                                                     ),
                                                   ),
@@ -856,7 +855,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                       .appointmentTime!),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
-                                                                  .bodyText2,
+                                                                  .bodySmall,
                                                             ),
                                                           ),
                                                           Padding(
@@ -874,7 +873,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                                       .appointmentTime!),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
-                                                                  .bodyText1,
+                                                                  .bodyMedium,
                                                             ),
                                                           ),
                                                         ],
@@ -893,7 +892,7 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyText1,
+                                                                .bodyMedium,
                                                       ),
                                                     ),
                                                     Expanded(
@@ -910,13 +909,13 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
                                                               .appointmentName!,
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .bodyText1
+                                                              .bodyMedium
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .secondaryColor,
+                                                                    .secondary,
                                                               ),
                                                         ),
                                                       ),

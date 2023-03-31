@@ -56,7 +56,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
         ),
         title: Text(
           'Forgot Password',
-          style: FlutterFlowTheme.of(context).title3,
+          style: FlutterFlowTheme.of(context).headlineSmall,
         ),
         actions: [],
         centerTitle: false,
@@ -84,7 +84,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                   Expanded(
                     child: Text(
                       'Enter the email associated with your account and we will send you a verification code.',
-                      style: FlutterFlowTheme.of(context).bodyText2,
+                      style: FlutterFlowTheme.of(context).bodySmall,
                     ),
                   ),
                 ],
@@ -97,9 +97,9 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                 obscureText: false,
                 decoration: InputDecoration(
                   labelText: 'Email Address',
-                  labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                  labelStyle: FlutterFlowTheme.of(context).bodySmall,
                   hintText: 'Enter your email...',
-                  hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                  hintStyle: FlutterFlowTheme.of(context).bodySmall,
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: Color(0x00000000),
@@ -133,7 +133,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                   contentPadding:
                       EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 24.0),
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1,
+                style: FlutterFlowTheme.of(context).bodyMedium,
                 validator:
                     _model.emailAddressControllerValidator.asValidator(context),
               ),
@@ -164,8 +164,8 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   iconPadding:
                       EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: FlutterFlowTheme.of(context).primaryColor,
-                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                  color: FlutterFlowTheme.of(context).primary,
+                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Outfit',
                         color: FlutterFlowTheme.of(context).textColor,
                       ),

@@ -46,7 +46,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
         automaticallyImplyLeading: false,
         title: Text(
           'Symptoms',
-          style: FlutterFlowTheme.of(context).title1,
+          style: FlutterFlowTheme.of(context).displaySmall,
         ),
         actions: [
           Padding(
@@ -80,14 +80,14 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                         decoration: InputDecoration(
                           labelText: 'Search symptoms…',
                           labelStyle: FlutterFlowTheme.of(context)
-                              .bodyText1
+                              .bodyMedium
                               .override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).grayLight,
                               ),
                           hintText: 'Headache, heartburn etc...',
                           hintStyle: FlutterFlowTheme.of(context)
-                              .bodyText1
+                              .bodyMedium
                               .override(
                                 fontFamily: 'Outfit',
                                 color:
@@ -133,7 +133,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                             size: 24.0,
                           ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Outfit',
                               color: FlutterFlowTheme.of(context).textColor,
                             ),
@@ -179,7 +179,8 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                 Expanded(
                                   child: Text(
                                     '[Symptom Name]',
-                                    style: FlutterFlowTheme.of(context).title3,
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineSmall,
                                   ),
                                 ),
                                 Icon(
@@ -199,7 +200,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                     child: AutoSizeText(
                                       'Convulsive disorder that does something and extra content goes here because that is where it goes okay, don’t question.',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText2,
+                                          .bodySmall,
                                     ),
                                   ),
                                 ],
@@ -239,7 +240,8 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                 Expanded(
                                   child: Text(
                                     '[Symptom Name]',
-                                    style: FlutterFlowTheme.of(context).title3,
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineSmall,
                                   ),
                                 ),
                                 Icon(
@@ -259,7 +261,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                     child: AutoSizeText(
                                       'Convulsive disorder that does something and extra content goes here because that is where it goes okay, don’t question.',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText2,
+                                          .bodySmall,
                                     ),
                                   ),
                                 ],
@@ -299,7 +301,8 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                 Expanded(
                                   child: Text(
                                     '[Symptom Name]',
-                                    style: FlutterFlowTheme.of(context).title3,
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineSmall,
                                   ),
                                 ),
                                 Icon(
@@ -319,7 +322,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                     child: AutoSizeText(
                                       'Convulsive disorder that does something and extra content goes here because that is where it goes okay, don’t question.',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText2,
+                                          .bodySmall,
                                     ),
                                   ),
                                 ],
@@ -359,7 +362,8 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                 Expanded(
                                   child: Text(
                                     '[Symptom Name]',
-                                    style: FlutterFlowTheme.of(context).title3,
+                                    style: FlutterFlowTheme.of(context)
+                                        .headlineSmall,
                                   ),
                                 ),
                                 Icon(
@@ -379,7 +383,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                     child: AutoSizeText(
                                       'Convulsive disorder that does something and extra content goes here because that is where it goes okay, don’t question.',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText2,
+                                          .bodySmall,
                                     ),
                                   ),
                                 ],

@@ -60,7 +60,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
                 size: 40.0,
               ),
             ),
@@ -85,7 +85,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
             ),
             title: Text(
               'Edit Profile',
-              style: FlutterFlowTheme.of(context).title3,
+              style: FlutterFlowTheme.of(context).headlineSmall,
             ),
             actions: [],
             centerTitle: false,
@@ -193,7 +193,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primaryBackground,
-                          textStyle: FlutterFlowTheme.of(context).bodyText1,
+                          textStyle: FlutterFlowTheme.of(context).bodyMedium,
                           elevation: 2.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,
@@ -214,9 +214,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Your Name',
-                          labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
                           hintText: 'Please enter a valid number...',
-                          hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -251,7 +251,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                         validator: _model.yourNameControllerValidator
                             .asValidator(context),
                       ),
@@ -264,9 +264,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Email Address',
-                          labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
                           hintText: 'Your email',
-                          hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -301,7 +301,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                         keyboardType: TextInputType.emailAddress,
                         validator: _model.yourEmailControllerValidator
                             .asValidator(context),
@@ -318,9 +318,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Your Age',
-                          labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
                           hintText: 'i.e. 34',
-                          hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -355,7 +355,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                         keyboardType: TextInputType.number,
                         validator: _model.yourAgeControllerValidator
                             .asValidator(context),
@@ -372,9 +372,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelText: 'Ailments',
-                          labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                          labelStyle: FlutterFlowTheme.of(context).bodySmall,
                           hintText: 'What types of allergies do you have..',
-                          hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                          hintStyle: FlutterFlowTheme.of(context).bodySmall,
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -409,7 +409,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           contentPadding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 24.0, 20.0, 24.0),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                         maxLines: 3,
                         validator: _model.yourAilmentsControllerValidator
                             .asValidator(context),
@@ -423,7 +423,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         children: [
                           Text(
                             'Your Birth Sex',
-                            style: FlutterFlowTheme.of(context).bodyText2,
+                            style: FlutterFlowTheme.of(context).bodySmall,
                           ),
                         ],
                       ),
@@ -441,15 +441,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 FormFieldController<String>(
                                     editProfileUsersRecord.userSex!),
                             optionHeight: 25.0,
-                            textStyle: FlutterFlowTheme.of(context).bodyText2,
+                            textStyle: FlutterFlowTheme.of(context).bodySmall,
                             selectedTextStyle:
-                                FlutterFlowTheme.of(context).bodyText1,
+                                FlutterFlowTheme.of(context).bodyMedium,
                             textPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             buttonPosition: RadioButtonPosition.left,
                             direction: Axis.horizontal,
                             radioButtonColor:
-                                FlutterFlowTheme.of(context).primaryColor,
+                                FlutterFlowTheme.of(context).primary,
                             inactiveRadioButtonColor:
                                 FlutterFlowTheme.of(context).grayLight,
                             toggleable: false,
@@ -483,8 +483,8 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                               0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: FlutterFlowTheme.of(context).primaryColor,
-                          textStyle: FlutterFlowTheme.of(context).subtitle2,
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle: FlutterFlowTheme.of(context).titleSmall,
                           elevation: 3.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,

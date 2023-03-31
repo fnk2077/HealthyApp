@@ -58,7 +58,7 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
               Text(
                 'No Appointments!',
                 textAlign: TextAlign.center,
-                style: FlutterFlowTheme.of(context).title3,
+                style: FlutterFlowTheme.of(context).headlineSmall,
               ),
             ],
           ),
@@ -73,7 +73,7 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
                 child: Text(
                   'You are all caught! No appointments scheduled, need an appointment? Schedule one now.',
                   textAlign: TextAlign.center,
-                  style: FlutterFlowTheme.of(context).bodyText2,
+                  style: FlutterFlowTheme.of(context).bodySmall,
                 ),
               ),
             ],
@@ -105,8 +105,8 @@ class _EmptyListWidgetState extends State<EmptyListWidget> {
               height: 50.0,
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
               iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: FlutterFlowTheme.of(context).primaryColor,
-              textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+              color: FlutterFlowTheme.of(context).primary,
+              textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                     fontFamily: 'Lexend Deca',
                     color: Colors.white,
                     fontSize: 16.0,

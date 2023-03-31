@@ -263,7 +263,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                             width: 40.0,
                             height: 40.0,
                             child: SpinKitPumpingHeart(
-                              color: FlutterFlowTheme.of(context).primaryColor,
+                              color: FlutterFlowTheme.of(context).primary,
                               size: 40.0,
                             ),
                           ),
@@ -288,7 +288,8 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                   0.0, 8.0, 0.0, 0.0),
                               child: Text(
                                 'Book Appointment',
-                                style: FlutterFlowTheme.of(context).title3,
+                                style:
+                                    FlutterFlowTheme.of(context).headlineSmall,
                               ),
                             ),
                             Row(
@@ -301,7 +302,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                     child: Text(
                                       'Fill out the information below in order to book your appointment with our office.',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText2,
+                                          .bodySmall,
                                     ),
                                   ),
                                 ),
@@ -312,7 +313,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                   0.0, 12.0, 0.0, 0.0),
                               child: Text(
                                 'Emails will be sent to:',
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                               ),
                             ),
                             Padding(
@@ -321,11 +322,11 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                               child: Text(
                                 currentUserEmail,
                                 style: FlutterFlowTheme.of(context)
-                                    .subtitle1
+                                    .titleMedium
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                     ),
                               ),
                             ),
@@ -341,7 +342,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                 decoration: InputDecoration(
                                   labelText: 'Booking For',
                                   labelStyle:
-                                      FlutterFlowTheme.of(context).bodyText2,
+                                      FlutterFlowTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
@@ -379,7 +380,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                           20.0, 24.0, 0.0, 24.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
-                                    .subtitle2
+                                    .titleSmall
                                     .override(
                                       fontFamily: 'Outfit',
                                       color: FlutterFlowTheme.of(context)
@@ -407,7 +408,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                 width: MediaQuery.of(context).size.width * 0.9,
                                 height: 60.0,
                                 textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
+                                    .titleSmall
                                     .override(
                                       fontFamily: 'Outfit',
                                       color: FlutterFlowTheme.of(context)
@@ -442,7 +443,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                 decoration: InputDecoration(
                                   labelText: 'What\'s the problem?',
                                   labelStyle:
-                                      FlutterFlowTheme.of(context).bodyText2,
+                                      FlutterFlowTheme.of(context).bodySmall,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
@@ -479,7 +480,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                       EdgeInsetsDirectional.fromSTEB(
                                           20.0, 24.0, 0.0, 24.0),
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                style: FlutterFlowTheme.of(context).bodyMedium,
                                 textAlign: TextAlign.start,
                                 maxLines: 8,
                                 keyboardType: TextInputType.multiline,
@@ -545,7 +546,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                                   'Choose Date & Time',
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText1
+                                                      .bodyMedium
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         fontSize: 12.0,
@@ -566,13 +567,13 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText2
+                                                              .bodySmall
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .tertiaryColor,
+                                                                    .tertiary,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
@@ -590,13 +591,13 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText2
+                                                              .bodySmall
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .tertiaryColor,
+                                                                    .tertiary,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
@@ -668,7 +669,7 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
                                       textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2
+                                          .titleSmall
                                           .override(
                                             fontFamily: 'Outfit',
                                             color: FlutterFlowTheme.of(context)
@@ -711,10 +712,10 @@ class _BookAppointmentWidgetState extends State<BookAppointmentWidget>
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                       textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2
+                                          .titleSmall
                                           .override(
                                             fontFamily: 'Outfit',
                                             color: Colors.white,

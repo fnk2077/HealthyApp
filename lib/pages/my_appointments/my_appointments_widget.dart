@@ -63,7 +63,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
             },
           ).then((value) => setState(() {}));
         },
-        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
+        backgroundColor: FlutterFlowTheme.of(context).primary,
         elevation: 8.0,
         child: Icon(
           Icons.add_rounded,
@@ -76,7 +76,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
         automaticallyImplyLeading: false,
         title: Text(
           'Appointments',
-          style: FlutterFlowTheme.of(context).title1,
+          style: FlutterFlowTheme.of(context).displaySmall,
         ),
         actions: [
           Padding(
@@ -102,7 +102,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                 children: [
                   Text(
                     'My Appointments',
-                    style: FlutterFlowTheme.of(context).bodyText2,
+                    style: FlutterFlowTheme.of(context).bodySmall,
                   ),
                 ],
               ),
@@ -123,7 +123,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                         width: 40.0,
                         height: 40.0,
                         child: SpinKitPumpingHeart(
-                          color: FlutterFlowTheme.of(context).primaryColor,
+                          color: FlutterFlowTheme.of(context).primary,
                           size: 40.0,
                         ),
                       ),
@@ -157,8 +157,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                                   width: 40.0,
                                   height: 40.0,
                                   child: SpinKitPumpingHeart(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     size: 40.0,
                                   ),
                                 ),
@@ -217,7 +216,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                                                     .appointmentType!,
                                                 style:
                                                     FlutterFlowTheme.of(context)
-                                                        .title3,
+                                                        .headlineSmall,
                                               ),
                                             ),
                                           ),
@@ -240,12 +239,12 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                                               'For AppointmentName',
                                             ),
                                             style: FlutterFlowTheme.of(context)
-                                                .bodyText1
+                                                .bodyMedium
                                                 .override(
                                                   fontFamily: 'Outfit',
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .secondaryColor,
+                                                      .secondary,
                                                 ),
                                           ),
                                         ),
@@ -282,7 +281,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText1,
+                                                              .bodyMedium,
                                                     ),
                                                   ),
                                                   Padding(
@@ -298,7 +297,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText2,
+                                                              .bodySmall,
                                                     ),
                                                   ),
                                                 ],

@@ -87,13 +87,13 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: initialUser == null || displaySplashImage
           ? Builder(
-              builder: (context) => Container(
-                color: Colors.transparent,
-                child: Center(
-                  child: Image.asset(
-                    'assets/images/Medical_ScheduleApp_0.0.png',
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    fit: BoxFit.fitWidth,
+              builder: (context) => Center(
+                child: SizedBox(
+                  width: 40.0,
+                  height: 40.0,
+                  child: SpinKitPumpingHeart(
+                    color: FlutterFlowTheme.of(context).primary,
+                    size: 40.0,
                   ),
                 ),
               ),
@@ -145,7 +145,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPageName = tabs.keys.toList()[i];
         }),
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        selectedItemColor: FlutterFlowTheme.of(context).primaryColor,
+        selectedItemColor: FlutterFlowTheme.of(context).primary,
         unselectedItemColor: FlutterFlowTheme.of(context).grayLight,
         showSelectedLabels: true,
         showUnselectedLabels: false,

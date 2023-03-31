@@ -54,7 +54,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primaryColor,
+                color: FlutterFlowTheme.of(context).primary,
                 size: 40.0,
               ),
             ),
@@ -79,7 +79,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
             ),
             title: Text(
               'Details',
-              style: FlutterFlowTheme.of(context).title3,
+              style: FlutterFlowTheme.of(context).headlineSmall,
             ),
             actions: [],
             centerTitle: false,
@@ -97,7 +97,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                       Expanded(
                         child: Text(
                           'Type of Appointment',
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
                       ),
                     ],
@@ -111,7 +111,9 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                       Expanded(
                         child: Text(
                           appointmentDetailsAppointmentsRecord.appointmentType!,
-                          style: FlutterFlowTheme.of(context).title3.override(
+                          style: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .override(
                                 fontFamily: 'Outfit',
                                 fontWeight: FontWeight.bold,
                               ),
@@ -129,7 +131,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                       Expanded(
                         child: Text(
                           'What’s the problem?',
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
                       ),
                     ],
@@ -144,7 +146,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                         child: Text(
                           appointmentDetailsAppointmentsRecord
                               .appointmentDescription!,
-                          style: FlutterFlowTheme.of(context).bodyText2,
+                          style: FlutterFlowTheme.of(context).bodySmall,
                         ),
                       ),
                     ],
@@ -159,7 +161,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                       Expanded(
                         child: Text(
                           'For',
-                          style: FlutterFlowTheme.of(context).bodyText1,
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
                       ),
                     ],
@@ -181,8 +183,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                               width: 40.0,
                               height: 40.0,
                               child: SpinKitPumpingHeart(
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                color: FlutterFlowTheme.of(context).primary,
                                 size: 40.0,
                               ),
                             ),
@@ -212,8 +213,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                               children: [
                                 Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: FlutterFlowTheme.of(context).primary,
                                   elevation: 2.0,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(40.0),
@@ -250,7 +250,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                                             appointmentDetailsAppointmentsRecord
                                                 .appointmentName!,
                                             style: FlutterFlowTheme.of(context)
-                                                .title3,
+                                                .headlineSmall,
                                           ),
                                         ],
                                       ),
@@ -258,12 +258,12 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                                         appointmentDetailsAppointmentsRecord
                                             .appointmentEmail!,
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1
+                                            .bodyMedium
                                             .override(
                                               fontFamily: 'Outfit',
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryColor,
+                                                      .primary,
                                             ),
                                       ),
                                     ],
@@ -288,7 +288,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                               0.0, 16.0, 0.0, 0.0),
                           child: Text(
                             'When',
-                            style: FlutterFlowTheme.of(context).bodyText1,
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
                         ),
                       ),
@@ -305,7 +305,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                             'MMMEd',
                             appointmentDetailsAppointmentsRecord
                                 .appointmentTime!),
-                        style: FlutterFlowTheme.of(context).title1,
+                        style: FlutterFlowTheme.of(context).displaySmall,
                       ),
                       Expanded(
                         child: Padding(
@@ -316,7 +316,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                                 'jm',
                                 appointmentDetailsAppointmentsRecord
                                     .appointmentTime!),
-                            style: FlutterFlowTheme.of(context).title1,
+                            style: FlutterFlowTheme.of(context).displaySmall,
                           ),
                         ),
                       ),
@@ -354,8 +354,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      textStyle: FlutterFlowTheme.of(context).subtitle2,
+                      color: FlutterFlowTheme.of(context).primary,
+                      textStyle: FlutterFlowTheme.of(context).titleSmall,
                       elevation: 2.0,
                       borderSide: BorderSide(
                         color: Colors.transparent,
@@ -376,7 +376,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                           content: Text(
                             'You have cancelled your appointment!',
                             style: FlutterFlowTheme.of(context)
-                                .bodyText1
+                                .bodyMedium
                                 .override(
                                   fontFamily: 'Outfit',
                                   color: FlutterFlowTheme.of(context).alternate,
@@ -398,7 +398,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       textStyle:
-                          FlutterFlowTheme.of(context).subtitle2.override(
+                          FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Outfit',
                                 color: Color(0xFFDF3F3F),
                                 fontWeight: FontWeight.normal,

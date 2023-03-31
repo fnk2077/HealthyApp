@@ -62,7 +62,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
         ),
         title: Text(
           'Add Another Profile',
-          style: FlutterFlowTheme.of(context).title3,
+          style: FlutterFlowTheme.of(context).headlineSmall,
         ),
         actions: [],
         centerTitle: false,
@@ -96,7 +96,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                       child: Text(
                         'Upload a photo for us to easily identify this person.',
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                     ),
                   ],
@@ -110,13 +110,13 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                     decoration: InputDecoration(
                       labelText: 'Persons Name',
                       labelStyle:
-                          FlutterFlowTheme.of(context).bodyText1.override(
+                          FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).grayLight,
                               ),
                       hintText: 'Official name here...',
                       hintStyle: FlutterFlowTheme.of(context)
-                          .bodyText1
+                          .bodyMedium
                           .override(
                             fontFamily: 'Outfit',
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -155,7 +155,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Outfit',
                           color: FlutterFlowTheme.of(context).secondaryText,
                         ),
@@ -172,13 +172,13 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                     decoration: InputDecoration(
                       labelText: 'Persons Age',
                       labelStyle:
-                          FlutterFlowTheme.of(context).bodyText1.override(
+                          FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).grayLight,
                               ),
                       hintText: 'i.e. 34',
                       hintStyle: FlutterFlowTheme.of(context)
-                          .bodyText1
+                          .bodyMedium
                           .override(
                             fontFamily: 'Outfit',
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -217,7 +217,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Outfit',
                           color: FlutterFlowTheme.of(context).secondaryText,
                         ),
@@ -235,13 +235,13 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                     decoration: InputDecoration(
                       labelText: 'Persons Ailments',
                       labelStyle:
-                          FlutterFlowTheme.of(context).bodyText1.override(
+                          FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).grayLight,
                               ),
                       hintText: 'What types of allergies do they have..',
                       hintStyle: FlutterFlowTheme.of(context)
-                          .bodyText1
+                          .bodyMedium
                           .override(
                             fontFamily: 'Outfit',
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -280,7 +280,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Outfit',
                           color: FlutterFlowTheme.of(context).textColor,
                         ),
@@ -297,13 +297,13 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                     decoration: InputDecoration(
                       labelText: 'Location',
                       labelStyle:
-                          FlutterFlowTheme.of(context).bodyText1.override(
+                          FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).grayLight,
                               ),
                       hintText: 'Please enter a valid email...',
                       hintStyle: FlutterFlowTheme.of(context)
-                          .bodyText1
+                          .bodyMedium
                           .override(
                             fontFamily: 'Outfit',
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -342,7 +342,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                       contentPadding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 24.0, 20.0, 24.0),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Outfit',
                           color: FlutterFlowTheme.of(context).textColor,
                         ),
@@ -359,7 +359,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                     children: [
                       Text(
                         'Persons Birth Sex',
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyMedium,
                       ),
                     ],
                   ),
@@ -383,9 +383,9 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                               controller: _model.radioButtonController ??=
                                   FormFieldController<String>(null),
                               optionHeight: 25.0,
-                              textStyle: FlutterFlowTheme.of(context).bodyText2,
+                              textStyle: FlutterFlowTheme.of(context).bodySmall,
                               selectedTextStyle: FlutterFlowTheme.of(context)
-                                  .subtitle2
+                                  .titleSmall
                                   .override(
                                     fontFamily: 'Outfit',
                                     color: FlutterFlowTheme.of(context)
@@ -396,7 +396,7 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                               buttonPosition: RadioButtonPosition.left,
                               direction: Axis.horizontal,
                               radioButtonColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
+                                  FlutterFlowTheme.of(context).primary,
                               inactiveRadioButtonColor:
                                   FlutterFlowTheme.of(context).grayLight,
                               toggleable: false,
@@ -429,9 +429,9 @@ class _AddAnotherProfileWidgetState extends State<AddAnotherProfileWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: FlutterFlowTheme.of(context).primary,
                       textStyle:
-                          FlutterFlowTheme.of(context).subtitle2.override(
+                          FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Outfit',
                                 color: FlutterFlowTheme.of(context).textColor,
                               ),

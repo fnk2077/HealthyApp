@@ -44,28 +44,31 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 60.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (Theme.of(context).brightness == Brightness.dark)
                   Image.asset(
-                    'assets/images/health-ai_logoVert.png',
+                    'assets/images/MiracleBookingBlackInColum-removebg-preview.png',
                     width: 200.0,
                     height: 100.0,
-                    fit: BoxFit.fitHeight,
-                  ),
-                if (!(Theme.of(context).brightness == Brightness.dark))
-                  Image.asset(
-                    'assets/images/logo_darkFull@2x.png',
-                    width: 200.0,
-                    height: 100.0,
-                    fit: BoxFit.fitHeight,
+                    fit: BoxFit.cover,
                   ),
               ],
             ),
           ),
+          if (!(Theme.of(context).brightness == Brightness.dark))
+            ClipRRect(
+              borderRadius: BorderRadius.circular(0.0),
+              child: Image.asset(
+                'assets/images/MiracleBookingWhiteInColum-removebg-preview.png',
+                width: 200.0,
+                height: 100.0,
+                fit: BoxFit.cover,
+              ),
+            ),
           Row(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -118,7 +121,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             'Stay in Touch',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .title1,
+                                                .displaySmall,
                                           ),
                                         ),
                                       ],
@@ -135,7 +138,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             'Always have your medical office at your fingertips.',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .subtitle1,
+                                                .titleMedium,
                                           ),
                                         ),
                                       ],
@@ -179,7 +182,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             'Schedule Appointments',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .title1,
+                                                .displaySmall,
                                           ),
                                         ),
                                       ],
@@ -196,7 +199,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             'Easily schedule appointments for checkups,  routine procedures, etc.',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .subtitle1,
+                                                .titleMedium,
                                           ),
                                         ),
                                       ],
@@ -240,7 +243,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             'Doctor in your pocket',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .title1,
+                                                .displaySmall,
                                           ),
                                         ),
                                       ],
@@ -257,7 +260,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                             'Easily find symptoms and common factors that affect you daily.',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
-                                                .subtitle1,
+                                                .titleMedium,
                                           ),
                                         ),
                                       ],
@@ -307,41 +310,37 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
             ],
           ),
           Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+            child: FFButtonWidget(
+              onPressed: () {
+                print('Button pressed ...');
+              },
+              text: 'Continue',
+              options: FFButtonOptions(
+                width: 200.0,
+                height: 50.0,
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                color: FlutterFlowTheme.of(context).primaryBackground,
+                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                      fontFamily: 'Outfit',
+                      color: FlutterFlowTheme.of(context).primaryText,
+                    ),
+                elevation: 2.0,
+                borderSide: BorderSide(
+                  color: Colors.transparent,
+                  width: 1.0,
+                ),
+                borderRadius: BorderRadius.circular(40.0),
+              ),
+            ),
+          ),
+          Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                  child: FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
-                    },
-                    text: 'Continue',
-                    options: FFButtonOptions(
-                      width: 200.0,
-                      height: 50.0,
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      textStyle:
-                          FlutterFlowTheme.of(context).subtitle2.override(
-                                fontFamily: 'Outfit',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                              ),
-                      elevation: 2.0,
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1.0,
-                      ),
-                      borderRadius: BorderRadius.circular(40.0),
-                    ),
-                  ),
-                ),
-              ],
+              children: [],
             ),
           ),
         ],
