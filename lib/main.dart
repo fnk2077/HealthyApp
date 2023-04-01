@@ -87,14 +87,11 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       home: initialUser == null || displaySplashImage
           ? Builder(
-              builder: (context) => Center(
-                child: SizedBox(
-                  width: 40.0,
-                  height: 40.0,
-                  child: SpinKitPumpingHeart(
-                    color: FlutterFlowTheme.of(context).primary,
-                    size: 40.0,
-                  ),
+              builder: (context) => Container(
+                color: Colors.transparent,
+                child: Image.asset(
+                  'assets/images/MiracleBookingWhiteInColum-removebg-preview.png',
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             )
@@ -132,6 +129,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'homePage': HomePageWidget(),
       'myAppointments': MyAppointmentsWidget(),
+      'orderMedicine': OrderMedicineWidget(),
       'findSymptoms': FindSymptomsWidget(),
       'profilePage': ProfilePageWidget(),
     };
@@ -173,6 +171,14 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: '•',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.format_list_bulleted_rounded,
+              size: 24.0,
+            ),
+            label: 'Shop',
             tooltip: '',
           ),
           BottomNavigationBarItem(
