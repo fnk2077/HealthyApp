@@ -4,6 +4,7 @@ import '/components/main_logo/main_logo_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/main.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -49,7 +50,7 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primary,
+                color: Color(0xFFFFACAC),
                 size: 40.0,
               ),
             ),
@@ -73,7 +74,12 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                 size: 30.0,
               ),
               onPressed: () async {
-                Navigator.pop(context);
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NavBarPage(initialPage: 'homePage'),
+                  ),
+                );
               },
             ),
             title: Text(
@@ -118,8 +124,11 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.asset(
-                                'assets/images/UI_avatar_2@3x.png',
+                              child: Image.network(
+                                valueOrDefault<String>(
+                                  detectPageUsersRecord.photoUrl,
+                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/health-ai-mj6puy/assets/hu4vs0lstizz/UI_avatar_2@3x.png',
+                                ),
                               ),
                             ),
                           ),
@@ -188,8 +197,8 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                       MediaQuery.of(context).size.width * 0.86,
                                   height: 100.0,
                                   decoration: BoxDecoration(
-                                    color:
-                                        FlutterFlowTheme.of(context).tertiary,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Row(
@@ -231,7 +240,7 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                                           fontFamily: 'Outfit',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .alternate,
+                                                              .primaryText,
                                                           fontSize: 19.0,
                                                         ),
                                               ),
@@ -247,8 +256,9 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                                         .bodySmall
                                                         .override(
                                                           fontFamily: 'Outfit',
-                                                          color:
-                                                              Color(0xB4FFFFFF),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                         ),
                                                   ),
                                                 ),
@@ -275,8 +285,8 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                         0.86,
                                     height: 100.0,
                                     decoration: BoxDecoration(
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Row(
@@ -323,7 +333,7 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                                           fontFamily: 'Outfit',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .alternate,
+                                                              .primaryText,
                                                           fontSize: 19.0,
                                                         ),
                                                   ),
@@ -343,8 +353,9 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
-                                                                    0xB4FFFFFF),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
                                                               ),
                                                     ),
                                                   ),
@@ -373,7 +384,7 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                     height: 100.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
-                                          .secondary,
+                                          .secondaryBackground,
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Row(
@@ -420,7 +431,7 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                                           fontFamily: 'Outfit',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .alternate,
+                                                              .primaryText,
                                                           fontSize: 19.0,
                                                         ),
                                                   ),
@@ -440,8 +451,9 @@ class _DetectPageWidgetState extends State<DetectPageWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: Color(
-                                                                    0xB4FFFFFF),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
                                                               ),
                                                     ),
                                                   ),

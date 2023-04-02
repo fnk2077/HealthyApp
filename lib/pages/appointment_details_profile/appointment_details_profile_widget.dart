@@ -54,7 +54,7 @@ class _AppointmentDetailsProfileWidgetState
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primary,
+                color: Color(0xFFFFACAC),
                 size: 40.0,
               ),
             ),
@@ -187,7 +187,7 @@ class _AppointmentDetailsProfileWidgetState
                                 width: 40.0,
                                 height: 40.0,
                                 child: SpinKitPumpingHeart(
-                                  color: FlutterFlowTheme.of(context).primary,
+                                  color: Color(0xFFFFACAC),
                                   size: 40.0,
                                 ),
                               ),
@@ -233,8 +233,8 @@ class _AppointmentDetailsProfileWidgetState
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
                                           ),
-                                          child: Image.asset(
-                                            'assets/images/UI_avatar_2@3x.png',
+                                          child: Image.network(
+                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/health-ai-mj6puy/assets/hu4vs0lstizz/UI_avatar_2@3x.png',
                                           ),
                                         ),
                                       ),

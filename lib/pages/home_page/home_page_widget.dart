@@ -52,7 +52,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primary,
+                color: Color(0xFFFFACAC),
                 size: 40.0,
               ),
             ),
@@ -92,8 +92,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.asset(
-                                'assets/images/UI_avatar_2@3x.png',
+                              child: Image.network(
+                                valueOrDefault<String>(
+                                  homePageUsersRecord.photoUrl,
+                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/health-ai-mj6puy/assets/hu4vs0lstizz/UI_avatar_2@3x.png',
+                                ),
                               ),
                             ),
                           ),
@@ -191,7 +194,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               width: 40.0,
                               height: 40.0,
                               child: SpinKitPumpingHeart(
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: Color(0xFFFFACAC),
                                 size: 40.0,
                               ),
                             ),
@@ -233,8 +236,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         width: 40.0,
                                         height: 40.0,
                                         child: SpinKitPumpingHeart(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
+                                          color: Color(0xFFFFACAC),
                                           size: 40.0,
                                         ),
                                       ),
@@ -607,8 +609,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => NavBarPage(
-                                                initialPage: 'orderMedicine'),
+                                            builder: (context) =>
+                                                NavBarPage(initialPage: 'shop'),
                                           ),
                                         );
                                       },
@@ -709,8 +711,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         0.86,
                                     height: 100.0,
                                     decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondary,
+                                      color: Color(0xFF32AFEA),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: InkWell(

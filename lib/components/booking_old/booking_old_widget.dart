@@ -71,7 +71,7 @@ class _BookingOldWidgetState extends State<BookingOldWidget> {
                   width: 40.0,
                   height: 40.0,
                   child: SpinKitPumpingHeart(
-                    color: FlutterFlowTheme.of(context).primary,
+                    color: Color(0xFFFFACAC),
                     size: 40.0,
                   ),
                 ),

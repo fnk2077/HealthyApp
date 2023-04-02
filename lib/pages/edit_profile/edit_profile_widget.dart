@@ -60,7 +60,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
               width: 40.0,
               height: 40.0,
               child: SpinKitPumpingHeart(
-                color: FlutterFlowTheme.of(context).primary,
+                color: Color(0xFFFFACAC),
                 size: 40.0,
               ),
             ),
@@ -116,10 +116,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           shape: BoxShape.circle,
                         ),
                         child: Image.network(
-                          valueOrDefault<String>(
-                            editProfileUsersRecord.photoUrl,
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/health-ai-mj6puy/assets/hu4vs0lstizz/UI_avatar_2@3x.png',
-                          ),
+                          _model.uploadedFileUrl,
                         ),
                       ),
                     ),
@@ -470,6 +467,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             age: int.tryParse(_model.yourAgeController.text),
                             ailments: _model.yourAilmentsController.text,
                             userSex: _model.radioButtonValue,
+                            photoUrl: _model.uploadedFileUrl,
                           );
                           await editProfileUsersRecord.reference
                               .update(usersUpdateData);

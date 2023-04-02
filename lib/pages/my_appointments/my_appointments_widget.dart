@@ -123,7 +123,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                         width: 40.0,
                         height: 40.0,
                         child: SpinKitPumpingHeart(
-                          color: FlutterFlowTheme.of(context).primary,
+                          color: Color(0xFFFFACAC),
                           size: 40.0,
                         ),
                       ),
@@ -157,7 +157,7 @@ class _MyAppointmentsWidgetState extends State<MyAppointmentsWidget> {
                                   width: 40.0,
                                   height: 40.0,
                                   child: SpinKitPumpingHeart(
-                                    color: FlutterFlowTheme.of(context).primary,
+                                    color: Color(0xFFFFACAC),
                                     size: 40.0,
                                   ),
                                 ),
