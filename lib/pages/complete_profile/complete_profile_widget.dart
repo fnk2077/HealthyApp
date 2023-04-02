@@ -400,7 +400,7 @@ class _CompleteProfileWidgetState extends State<CompleteProfileWidget>
                           child: Image.network(
                             valueOrDefault<String>(
                               _model.uploadedFileUrl,
-                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/health-ai-mj6puy/assets/hu4vs0lstizz/UI_avatar_2@3x.png',
+                              'https://firebasestorage.googleapis.com/v0/b/good-healthy.appspot.com/o/default_profile.png?alt=media&token=c829931a-2cec-4a49-82be-de28e32faaa1',
                             ),
                           ),
                         ),

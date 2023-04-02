@@ -129,7 +129,6 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'homePage': HomePageWidget(),
       'myAppointments': MyAppointmentsWidget(),
-      'shop': ShopWidget(),
       'findSymptoms': FindSymptomsWidget(),
       'profilePage': ProfilePageWidget(),
     };
@@ -175,14 +174,6 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.shop,
-              size: 24.0,
-            ),
-            label: 'Shop',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
               Icons.favorite_border_rounded,
               size: 24.0,
             ),
@@ -204,7 +195,7 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             label: '•',
             tooltip: '',
-          )
+          ),
         ],
       ),
     );

@@ -116,7 +116,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           shape: BoxShape.circle,
                         ),
                         child: Image.network(
-                          _model.uploadedFileUrl,
+                          editProfileUsersRecord.photoUrl!,
                         ),
                       ),
                     ),

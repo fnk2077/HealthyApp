@@ -228,8 +228,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget> {
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                       ),
-                                      child: Image.asset(
-                                        'assets/images/UI_avatar_2@3x.png',
+                                      child: Image.network(
+                                        'https://firebasestorage.googleapis.com/v0/b/good-healthy.appspot.com/o/default_profile.png?alt=media&token=c829931a-2cec-4a49-82be-de28e32faaa1',
                                       ),
                                     ),
                                   ),

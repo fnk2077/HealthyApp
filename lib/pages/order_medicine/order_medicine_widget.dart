@@ -5,7 +5,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/main.dart';
+import '/pages/shop/shop_widget.dart';
 import '/pages/shopping_basket/shopping_basket_widget.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:expandable/expandable.dart';
@@ -432,8 +432,7 @@ class _OrderMedicineWidgetState extends State<OrderMedicineWidget>
                             await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    NavBarPage(initialPage: 'shop'),
+                                builder: (context) => ShopWidget(),
                               ),
                             );
                           },

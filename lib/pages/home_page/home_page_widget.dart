@@ -4,9 +4,9 @@ import '/components/book_appointment/book_appointment_widget.dart';
 import '/components/main_logo/main_logo_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/main.dart';
 import '/pages/appointment_details/appointment_details_widget.dart';
 import '/pages/detect_page/detect_page_widget.dart';
+import '/pages/shop/shop_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -95,7 +95,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               child: Image.network(
                                 valueOrDefault<String>(
                                   homePageUsersRecord.photoUrl,
-                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/health-ai-mj6puy/assets/hu4vs0lstizz/UI_avatar_2@3x.png',
+                                  'https://firebasestorage.googleapis.com/v0/b/good-healthy.appspot.com/o/default_profile.png?alt=media&token=c829931a-2cec-4a49-82be-de28e32faaa1',
                                 ),
                               ),
                             ),
@@ -609,8 +609,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         await Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                NavBarPage(initialPage: 'shop'),
+                                            builder: (context) => ShopWidget(),
                                           ),
                                         );
                                       },
