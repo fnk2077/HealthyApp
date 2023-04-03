@@ -18,14 +18,16 @@ class _ShopWidgetState extends State<ShopWidget> {
           'Shop',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor:Color(0xFFAA77FF),
+        backgroundColor: Color(0xFFAA77FF),
         elevation: 5,
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(8, 16, 8, 8),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection("medicines").snapshots(),
-          builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          stream:
+              FirebaseFirestore.instance.collection("medicines").snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (!snapshot.hasData) {
               return Center(
                 child: CircularProgressIndicator(),
@@ -100,14 +102,6 @@ class _ShopWidgetState extends State<ShopWidget> {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Implement shopping cart functionality here
-        },
-        backgroundColor: Colors.blue,
-        child: Icon(Icons.shopping_cart),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
