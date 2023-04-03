@@ -10,20 +10,24 @@ class ShopWidget extends StatefulWidget {
 class _ShopWidgetState extends State<ShopWidget> {
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
           'Shop',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor:Color(0xFFAA77FF),
+        backgroundColor: Color(0xFFAA77FF),
         elevation: 5,
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(8, 16, 8, 8), // Add padding here
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection("medicines").snapshots(),
-          builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          stream:
+              FirebaseFirestore.instance.collection("medicines").snapshots(),
+          builder:
+              (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
             if (!snapshot.hasData) {
               return Center(
                 child: CircularProgressIndicator(),
@@ -46,17 +50,17 @@ class _ShopWidgetState extends State<ShopWidget> {
                       );
                     },
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 100,
+                          height: mediaQuery.size.height * 0.25,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(0),
                             child: Image.network(
                               doc['img_path'],
-                              fit: BoxFit.contain,
-                              width: MediaQuery.of(context).size.width / 2 - 12,
-                              height: MediaQuery.of(context).size.width,
+                              fit: BoxFit.fill,
+                              width: double.infinity,
+                              height: double.infinity,
                             ),
                           ),
                         ),
