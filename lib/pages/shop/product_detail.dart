@@ -12,9 +12,9 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Product Detail',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor:Color(0xFFAA77FF),
         elevation: 5,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -22,12 +22,13 @@ class ProductDetailScreen extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 40),
             SizedBox(
               height: 300,
               child: Center(
@@ -44,7 +45,7 @@ class ProductDetailScreen extends StatelessWidget {
                 child: SizedBox(
                   width: 500,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         doc['name'],
@@ -85,21 +86,29 @@ class ProductDetailScreen extends StatelessWidget {
                       SizedBox(height: 8),
                     
                       SizedBox(height: 32),
+                      
                       SizedBox(
                         width: double.infinity,
-                        height: 50,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: Text(
-                            'Buy Now',
-                            style: TextStyle(fontSize: 18),
+                        // height: 100,
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFFAA77FF),
+                              minimumSize: Size(200, 50),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(
+                              'Buy Now',
+                              style: TextStyle(fontSize: 20,),
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
+
                 ),
               ),
             ),
