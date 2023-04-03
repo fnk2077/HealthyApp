@@ -6,7 +6,6 @@ export '/pages/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
 export '/pages/add_another_profile/add_another_profile_widget.dart'
     show AddAnotherProfileWidget;
-export '/pages/onboarding/onboarding_widget.dart' show OnboardingWidget;
 export '/pages/home_page/home_page_widget.dart' show HomePageWidget;
 export '/pages/my_appointments/my_appointments_widget.dart'
     show MyAppointmentsWidget;
@@ -19,7 +18,5 @@ export '/pages/appointment_details_profile/appointment_details_profile_widget.da
     show AppointmentDetailsProfileWidget;
 export '/pages/detect_page/detect_page_widget.dart' show DetectPageWidget;
 export '/pages/shop/shop_widget.dart' show ShopWidget;
-export '/pages/order_medicine/order_medicine_widget.dart'
-    show OrderMedicineWidget;
-export '/pages/shopping_basket/shopping_basket_widget.dart'
-    show ShoppingBasketWidget;
+export '/pages/detect_result_example/detect_result_example_widget.dart'
+    show DetectResultExampleWidget;

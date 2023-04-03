@@ -2,7 +2,6 @@ import 'package:good_healthy/pages/find_symptoms/symptoms_detail.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-
 class FindSymptomsWidget extends StatefulWidget {
   @override
   _FindSymptomsWidgetState createState() => _FindSymptomsWidgetState();
@@ -18,6 +17,7 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFFAA77FF),
         title: Text("Symptoms", style: TextStyle(color: Colors.white)),
+        automaticallyImplyLeading: false, // Add this line
       ),
       body: Column(
         children: [
@@ -63,11 +63,11 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                     );
                   } else {
                     var filteredDocs = snapshot.data?.docs?.where((doc) {
-                      return doc['symptom']
-                          .toString()
-                          .toLowerCase()
-                          .contains(searchText.toLowerCase());
-                    })?.toList() ??
+                          return doc['symptom']
+                              .toString()
+                              .toLowerCase()
+                              .contains(searchText.toLowerCase());
+                        })?.toList() ??
                         [];
 
                     return ListView.builder(
@@ -82,6 +82,8 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                 builder: (context) => SymptomsDetailPage(
                                   symptom: document["symptom"],
                                   detail: document["detail"],
+                                  fullDetail: document["fullDetail"],
+                                  medicine: document["medicine"],
                                 ),
                               ),
                             );
@@ -92,12 +94,10 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                               elevation: 5,
                               child: ListTile(
                                 title: Text(document["symptom"]),
-                                subtitle: Expanded(
-                                  child: Text(
-                                    document["detail"],
-                                    maxLines: 3,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
+                                subtitle: Text(
+                                  document["detail"],
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                               shape: RoundedRectangleBorder(
@@ -120,5 +120,3 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
     );
   }
 }
-
-

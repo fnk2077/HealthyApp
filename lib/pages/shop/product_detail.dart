@@ -12,9 +12,9 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Product Detail',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFFAA77FF),
         elevation: 5,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -22,108 +22,137 @@ class ProductDetailScreen extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 40),
             SizedBox(
               height: 300,
-              child: Image.network(
-                doc['img_path'],
-                fit: BoxFit.cover,
+              child: Center(
+                child: Image.network(
+                  doc['img_path'],
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             SizedBox(height: 16),
             Padding(
               padding: EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    doc['name'],
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    doc['type'],
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  Text(
-                    '฿${doc['price']}',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  Text(
-                    doc['detail'],
-                    style: TextStyle(
-                      fontSize: 18,
-                      height: 1.5,
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  Text(
-                    'Shipping Type',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Row(
+              child: Center(
+                child: SizedBox(
+                  width: 500,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.blue,
-                        child: Icon(
-                          Icons.check,
-                          color: Colors.white,
+                      Text(
+                        doc['name'],
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(width: 8),
-                      Text('Standard shipping'),
-                    ],
-                  ),
-                  SizedBox(height: 8),
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundColor: Colors.grey,
-                        child: Icon(
-                          Icons.check,
-                          color: Colors.white,
+                      SizedBox(height: 8),
+                      Text(
+                        doc['type'],
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey,
                         ),
                       ),
-                      SizedBox(width: 8),
-                      Text('Express shipping'),
+                      SizedBox(height: 16),
+                      Text(
+                        '฿${doc['price']}',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 16),
+                      Text(
+                        doc['detail'].replaceAll('\\n', '\n'),
+                        style: TextStyle(
+                          fontSize: 18,
+                          height: 1.5,
+                        ),
+                      ),
+                      SizedBox(height: 16),
+                      SizedBox(height: 8),
+                      SizedBox(height: 8),
+                      SizedBox(height: 32),
+                      SizedBox(
+                        width: double.infinity,
+                        // height: 100,
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFFAA77FF),
+                              minimumSize: Size(200, 50),
+                            ),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text('Confirmation'),
+                                    content: Text(
+                                        'Are you sure you want to purchase this item?'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('Cancel'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          // Perform purchase logic here
+                                          Navigator.of(context).pop();
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                title:
+                                                    Text('Purchase Complete'),
+                                                content: Text(
+                                                    'Your purchase was successful!'),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: Text('OK'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: Text('Confirm'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            child: Text(
+                              'Buy Now',
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                  SizedBox(height: 32),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 50,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: Text(
-                        'Buy Now',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           ],

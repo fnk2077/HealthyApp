@@ -672,7 +672,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   0.0,
                                                                   8.0),
                                                       child: AutoSizeText(
-                                                        'Schedule an appointment with our licensed professional.',
+                                                        'Order medicine through the Miracle app.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -731,7 +731,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 0.0, 0.0),
                                             child: Image.asset(
-                                              'assets/images/4914344.png',
+                                              'assets/images/107807.png',
                                               width: 50.0,
                                               height: 50.0,
                                               fit: BoxFit.cover,
@@ -782,7 +782,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   0.0,
                                                                   8.0),
                                                       child: AutoSizeText(
-                                                        'Schedule an appointment with our licensed professional.',
+                                                        'Perform preliminary disease detection using a machine learning model.',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
