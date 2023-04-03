@@ -10,6 +10,8 @@ class ShopWidget extends StatefulWidget {
 class _ShopWidgetState extends State<ShopWidget> {
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -20,7 +22,7 @@ class _ShopWidgetState extends State<ShopWidget> {
         elevation: 5,
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(8, 16, 8, 8), // Add padding here
+        padding: EdgeInsets.fromLTRB(8, 16, 8, 8),
         child: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance.collection("medicines").snapshots(),
           builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -46,17 +48,17 @@ class _ShopWidgetState extends State<ShopWidget> {
                       );
                     },
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 100,
+                          height: mediaQuery.size.height * 0.25,
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(0),
                             child: Image.network(
                               doc['img_path'],
-                              fit: BoxFit.cover,
-                              width: MediaQuery.of(context).size.width / 2 - 12,
-                              height: MediaQuery.of(context).size.width,
+                              fit: BoxFit.fill,
+                              width: double.infinity,
+                              height: double.infinity,
                             ),
                           ),
                         ),
@@ -98,6 +100,14 @@ class _ShopWidgetState extends State<ShopWidget> {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Implement shopping cart functionality here
+        },
+        backgroundColor: Colors.blue,
+        child: Icon(Icons.shopping_cart),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
