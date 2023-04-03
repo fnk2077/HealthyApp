@@ -79,41 +79,11 @@ class ProductDetailScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 16),
-                      Text(
-                        'Shipping Type',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      
                       SizedBox(height: 8),
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Colors.blue,
-                            child: Icon(
-                              Icons.check,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(width: 8),
-                          Text('Standard shipping'),
-                        ],
-                      ),
+                      
                       SizedBox(height: 8),
-                      Row(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Colors.grey,
-                            child: Icon(
-                              Icons.check,
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(width: 8),
-                          Text('Express shipping'),
-                        ],
-                      ),
+                    
                       SizedBox(height: 32),
                       SizedBox(
                         width: double.infinity,
