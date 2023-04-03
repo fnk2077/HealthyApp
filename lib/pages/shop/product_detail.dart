@@ -14,7 +14,7 @@ class ProductDetailScreen extends StatelessWidget {
           'Product Detail',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor:Color(0xFFAA77FF),
+        backgroundColor: Color(0xFFAA77FF),
         elevation: 5,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -80,13 +80,9 @@ class ProductDetailScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 16),
-                      
                       SizedBox(height: 8),
-                      
                       SizedBox(height: 8),
-                    
                       SizedBox(height: 32),
-                      
                       SizedBox(
                         width: double.infinity,
                         // height: 100,
@@ -97,18 +93,65 @@ class ProductDetailScreen extends StatelessWidget {
                               minimumSize: Size(200, 50),
                             ),
                             onPressed: () {
-                              Navigator.of(context).pop();
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text('Confirmation'),
+                                    content: Text(
+                                        'Are you sure you want to purchase this item?'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                        child: Text('Cancel'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () {
+                                          // Perform purchase logic here
+                                          Navigator.of(context).pop();
+                                          showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return AlertDialog(
+                                                title:
+                                                    Text('Purchase Complete'),
+                                                content: Text(
+                                                    'Your purchase was successful!'),
+                                                actions: [
+                                                  TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: Text('OK'),
+                                                  ),
+                                                ],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: Text('Confirm'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
                             },
                             child: Text(
                               'Buy Now',
-                              style: TextStyle(fontSize: 20,),
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ],
                   ),
-
                 ),
               ),
             ),
