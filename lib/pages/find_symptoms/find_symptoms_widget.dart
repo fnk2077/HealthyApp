@@ -2,7 +2,6 @@ import 'package:good_healthy/pages/find_symptoms/symptoms_detail.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-
 class FindSymptomsWidget extends StatefulWidget {
   @override
   _FindSymptomsWidgetState createState() => _FindSymptomsWidgetState();
@@ -63,11 +62,11 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                     );
                   } else {
                     var filteredDocs = snapshot.data?.docs?.where((doc) {
-                      return doc['symptom']
-                          .toString()
-                          .toLowerCase()
-                          .contains(searchText.toLowerCase());
-                    })?.toList() ??
+                          return doc['symptom']
+                              .toString()
+                              .toLowerCase()
+                              .contains(searchText.toLowerCase());
+                        })?.toList() ??
                         [];
 
                     return ListView.builder(
@@ -82,6 +81,8 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
                                 builder: (context) => SymptomsDetailPage(
                                   symptom: document["symptom"],
                                   detail: document["detail"],
+                                  fullDetail: document["fullDetail"],
+                                  medicine: document["medicine"],
                                 ),
                               ),
                             );
@@ -120,5 +121,3 @@ class _FindSymptomsWidgetState extends State<FindSymptomsWidget> {
     );
   }
 }
-
-
